@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 📊 Assistente Inteligente de Análise de Dados
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um sistema web que utiliza Inteligência Artificial para auxiliar na análise de dados e visualização gráfica. Desenvolvido com foco em simplicidade de uso e apresentação clara, o sistema permite que usuários façam perguntas sobre dados, recebam sugestões baseadas em IA e gerem gráficos com arquivos `.csv`.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Funcionalidades
 
-### `npm start`
+- ✅ Upload de arquivos CSV para análise
+- ✅ Geração automática de gráficos (Plotly)
+- ✅ Interação com IA via API (OpenRouter)
+- ✅ Sugestões inteligentes com base em perguntas do usuário
+- ✅ Design responsivo e amigável com React + CSS customizado
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm test`
+**Frontend:**
+- React.js
+- Axios
+- Plotly.js
+- React Icons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Backend:**
+- Node.js
+- Express.js
+- Axios
+- body-parser
+- dotenv
 
-### `npm run build`
+**Outros:**
+- OpenRouter API com modelo `nousresearch/deephermes-3-mistral-24b-preview`
+- Estilização com CSS customizado e fontes do Google Fonts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Estrutura do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```data-analysis-app/
+├── backend/
+│ └── index.js
+├── frontend/
+│ ├── App.js
+│ ├── App.css
+│ └── .env
+├── README.m
+```
+---
 
-### `npm run eject`
+## ⚙️ Como Rodar Localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone o repositório**
+```bash
+git clone https://github.com/seuusuario/data-analysis-app.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash 
+cd data-analysis-app
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+OPENROUTER_API_KEY=sk-...
+```
+```bash
+node index.js
+```
+```bash
+cd ../frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧠 IA Utilizada
 
-### Code Splitting
+O modelo utilizado é o nousresearch/deephermes-3-mistral-24b-preview, acessado via OpenRouter. O prompt principal orienta o modelo a atuar como um especialista em análise de dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📈 Visualização de Dados
+Os dados são extraídos do CSV e desenhados usando o Plotly.js, com um gráfico dinâmico do tipo scatter (linhas e marcadores).
 
-### Analyzing the Bundle Size
+## 🖌️ Sugestões de Design (a melhorar)
+O layout atual foi prototipado rapidamente no Figma, mas recomenda-se refatorar o design com foco em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Responsividade
 
-### Making a Progressive Web App
+- Espaçamento proporcional ao conteúdo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Padronização de ícones e botões
 
-### Advanced Configuration
+- Uso de bibliotecas de UI como Tailwind ou Material UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔐 Segurança
 
-### Deployment
+- Não compartilhe sua chave .env publicamente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- O projeto já utiliza dotenv para proteger a API Key.
 
-### `npm run build` fails to minify
+- Recomenda-se um proxy backend para não expor diretamente a OpenRouter ao frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Licença
+Este projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## ✨ Autor
+***Desenvolvido por:***
+
+ **Gabriel Marques 🚀***
